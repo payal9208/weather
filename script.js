@@ -6,7 +6,7 @@
 // Generate a NEW key if your previous key was exposed.
 // Never upload the real key to GitHub.
 
-const API_KEY = "API";
+const API_KEY = "3a906b4cb57347dab7284325262108";
 
 const BASE_URL =
     "https://api.weatherapi.com/v1";
