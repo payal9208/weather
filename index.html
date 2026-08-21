@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WeatherX | Weather Application</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="logo">
+            🌤️ WeatherX
+        </div>
+
+        <button id="themeBtn" class="theme-btn">
+            🌙
+        </button>
+
+    </header>
+
+
+    <main class="container">
+
+        <!-- Search -->
+
+        <section class="search-section">
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="cityInput"
+                    placeholder="Search city..."
+                    autocomplete="off"
+                >
+
+                <button id="searchBtn">
+                    🔍 Search
+                </button>
+
+            </div>
+
+            <button id="locationBtn" class="location-btn">
+                📍 My Location
+            </button>
+
+        </section>
+
+
+        <!-- Loading -->
+
+        <div id="loading" class="loading hidden">
+
+            <div class="spinner"></div>
+
+            <p>
+                Fetching weather...
+            </p>
+
+        </div>
+
+
+        <!-- Error -->
+
+        <div id="error" class="error hidden"></div>
+
+
+        <!-- Weather Content -->
+
+        <section id="weatherContent" class="hidden">
+
+
+            <!-- Current Weather -->
+
+            <div class="current-weather card">
+
+                <div class="location">
+
+                    <h1 id="cityName">
+                        --
+                    </h1>
+
+                    <p id="date">
+                        --
+                    </p>
+
+                    <p id="localTime">
+                        --
+                    </p>
+
+                </div>
+
+
+                <div class="current-main">
+
+                    <div class="weather-icon">
+
+                        <img
+                            id="weatherIcon"
+                            src=""
+                            alt="Weather"
+                        >
+
+                    </div>
+
+
+                    <div>
+
+                        <div class="temperature">
+
+                            <span id="temperature">
+                                --
+                            </span>
+
+                            °C
+
+                        </div>
+
+
+                        <p id="description">
+                            --
+                        </p>
+
+
+                        <p>
+
+                            Feels like
+
+                            <strong>
+                                <span id="feelsLike">
+                                    --
+                                </span>
+                                °C
+                            </strong>
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Weather Details -->
+
+            <div class="details-grid">
+
+
+                <div class="detail-card">
+
+                    <span>💧</span>
+
+                    <p>
+                        Humidity
+                    </p>
+
+                    <strong id="humidity">
+                        --%
+                    </strong>
+
+                </div>
+
+
+                <div class="detail-card">
+
+                    <span>💨</span>
+
+                    <p>
+                        Wind Speed
+                    </p>
+
+                    <strong id="wind">
+                        -- km/h
+                    </strong>
+
+                </div>
+
+
+                <div class="detail-card">
+
+                    <span>🌡️</span>
+
+                    <p>
+                        Pressure
+                    </p>
+
+                    <strong id="pressure">
+                        -- hPa
+                    </strong>
+
+                </div>
+
+
+                <div class="detail-card">
+
+                    <span>👁️</span>
+
+                    <p>
+                        Visibility
+                    </p>
+
+                    <strong id="visibility">
+                        -- km
+                    </strong>
+
+                </div>
+
+
+                <div class="detail-card">
+
+                    <span>🌅</span>
+
+                    <p>
+                        Sunrise
+                    </p>
+
+                    <strong id="sunrise">
+                        --
+                    </strong>
+
+                </div>
+
+
+                <div class="detail-card">
+
+                    <span>🌇</span>
+
+                    <p>
+                        Sunset
+                    </p>
+
+                    <strong id="sunset">
+                        --
+                    </strong>
+
+                </div>
+
+
+                <div class="detail-card">
+
+                    <span>🌧️</span>
+
+                    <p>
+                        Rain Chance
+                    </p>
+
+                    <strong id="rainChance">
+                        --%
+                    </strong>
+
+                </div>
+
+
+                <div class="detail-card">
+
+                    <span>☀️</span>
+
+                    <p>
+                        UV Index
+                    </p>
+
+                    <strong id="uv">
+                        --
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- Forecast -->
+
+            <section class="forecast-section">
+
+                <h2>
+                    📅 5 Day Forecast
+                </h2>
+
+                <div
+                    id="forecast"
+                    class="forecast-grid"
+                ></div>
+
+            </section>
+
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            WeatherX © 2026 |
+            Powered by WeatherAPI.com
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
